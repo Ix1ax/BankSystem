@@ -70,10 +70,6 @@ public class AccountSevice {
         System.out.println("У вас нету данного аккаунта!");
         return null;
 
-        /*
-        TODO
-         */
-
 //        account = new Account();
 //        Scanner scanner = new Scanner(System.in);
 //        int identificator = scanner.nextInt();
@@ -81,25 +77,6 @@ public class AccountSevice {
 
 
     }
-
-    /*
-    Пополнение баланса у аккаунта
-     */
-    public void replenishmet(double balance){
-
-    }
-
-    /*
-    Снятие баланса у аккаунта
-     */
-    public void withdrawal(double balance){
-
-    }
-
-    public void transfer(double balance){
-
-    }
-
 
     /*
     Все аккаунты которые есть

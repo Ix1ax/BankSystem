@@ -4,10 +4,11 @@ public class Transaction {
     private TransactionType type;
     private double amount;
 
-    private Account recAccount;
+    private Status transactionStatus;
+    private Account transactionAccount;
 
     public Transaction(){
-
+        transactionAccount = null;
     }
 
     /*
@@ -28,11 +29,27 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public Account getRecAccount(){
-        return recAccount;
+    public void setTransactionStatus(Status status){
+        this.transactionStatus = status;
     }
-    public void setRecAccount(Account recAccount){
-        this.recAccount = recAccount;
+    public Status getTransactionStatus(){
+        return transactionStatus;
     }
 
+    public void setTransactionAccount(Account account){
+        this.transactionAccount = account;
+    }
+    public Account getTransactionAccount(){
+        return transactionAccount;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "type=" + type +
+                ", amount=" + amount +
+                ", status=" + transactionStatus +
+                ", transactionAccount=" + transactionAccount +
+                '}' + "\n";
+    }
 }

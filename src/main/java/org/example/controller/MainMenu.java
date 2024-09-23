@@ -4,6 +4,7 @@ import org.example.model.Client;
 import org.example.model.Role;
 import org.example.service.AccountSevice;
 import org.example.service.ClientService;
+import org.example.service.TransactionService;
 import org.utils.UserInputException;
 
 import java.util.InputMismatchException;
@@ -13,6 +14,7 @@ public class MainMenu {
 
     ClientService clientService = new ClientService();
     AccountSevice accountSevice = new AccountSevice();
+    TransactionService transactionService = new TransactionService();
     Client client;
     public void viewStartMenu() throws UserInputException {
         System.out.println("--------------------------");
@@ -36,15 +38,14 @@ public class MainMenu {
                 break;
             case 2:
                 client = clientService.loginClient();
-//                client = clientService.loginClient();
                 Role checkRole = client.getRole();
                 if(checkRole == Role.ADMIN) {
-                    System.out.println("-----\nADMIN PERMISSION\n----");
+//                    System.out.println("-----\nADMIN PERMISSION\n----");
                     AdminMenu adminMenu = new AdminMenu(this);
                     adminMenu.viewAdminMenu();
                 }
                 else if(checkRole == Role.USER){
-                    System.out.println("-----\nUSER PERMISSION\n----");
+//                    System.out.println("-----\nUSER PERMISSION\n----");
                     UserMenu userMenu = new UserMenu(this, client);
                     userMenu.viewUserMenu();
                 }

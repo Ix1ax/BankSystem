@@ -1,5 +1,6 @@
 package org.example.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,6 +17,8 @@ public class Account {
 
     public Account(){
         this.balance = 0;
+        this.transactionList = new ArrayList<>();
+        this.creditList = new ArrayList<>();
     }
 
     /*
